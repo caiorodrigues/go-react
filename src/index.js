@@ -9,6 +9,14 @@ class App extends Component {
     counter: 0
   };
 
+  componentDidMount() {}
+
+  shouldComponentUpdate(nextProps, nextState) {}
+
+  componentDidUpdate(prevProps, prevState) {}
+
+  componentWillUnmount() {}
+
   handleClick = () => {
     this.setState({
       counter: this.state.counter + 1
