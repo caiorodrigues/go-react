@@ -1,28 +1,30 @@
-import React, { Component, Fragment } from "react";
-import { render } from "react-dom";
+import React, { Component, Fragment } from 'react';
+import { render } from 'react-dom';
 
-import Button from "./Button";
+import Button from './Button';
 
-import "./style.scss";
+import './style.scss';
 
 class App extends Component {
   state = {
-    counter: 0
+    counter: 0,
   };
 
   handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
+    const { counter } = this.state;
+    this.setState({ counter: counter + 1 });
   };
 
   render() {
+    const { counter } = this.state;
     return (
       <Fragment>
         <h1 className="title">Hello world</h1>
-        <h2 style={{ color: "#F00" }}>{this.state.counter}</h2>
+        <h2 style={{ color: '#F00' }}>{counter}</h2>
         <Button onClick={this.handleClick}>Somar</Button>
       </Fragment>
     );
   }
 }
 
-render(<App />, document.getElementById("app"));
+render(<App />, document.getElementById('app'));
